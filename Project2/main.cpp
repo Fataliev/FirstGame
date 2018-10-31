@@ -6,18 +6,6 @@
 using namespace sf;
 
 
-// нужно проинициализировать карту и игрока до начала их взаимодействия 
-/* сделать так
-	Player player(......)
-	Map map(............)
-
-	player.setMap(.......)
-	map.setPlayer(........)
-*/
-
-
-
-
 int main()
 {
 
@@ -30,8 +18,13 @@ int main()
 	float currentFrame = 0;
 
 	Player player(t);
-	Map map(&window, &player);
+	Map map(&window);
 	
+
+	player.setMap(&map);
+	map.setPlayer(&player);
+
+
 
 	Clock clock;
 

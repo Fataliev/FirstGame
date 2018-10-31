@@ -16,6 +16,13 @@ Player::~Player()
 {
 }
 
+void Player::setMap(Map *mapArgument) {
+
+	mapPrivatePtr = mapArgument;
+}
+
+
+
 void Player::update(float time)
 {
 
@@ -96,7 +103,7 @@ void Player::update(float time)
 	sprite.setPosition(rect.left - offsetX, rect.top - offsetY);
 
 
-	// обнуление 
+	// о1бнуление 
 	dx = 0;
 	z = false;
 

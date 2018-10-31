@@ -7,10 +7,12 @@ class Map
 {
 
 public:
-	Map(RenderWindow *window, Player *playerArgument);
+	Map(RenderWindow *window);
 	~Map();
 	void update(float time);
 
+
+	void setPlayer(Player *playerArgument);
 
 	int tileMapHeight = 30;
 	int tileMapWidth = 70;

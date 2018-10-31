@@ -1,11 +1,9 @@
 #include "Map.h"
 #include <iostream>
 
-Map::Map(RenderWindow *windowArgPtr, Player *playerArgument)
+Map::Map(RenderWindow *windowArgPtr)
 {
 	windowPrivatePtr = windowArgPtr;
-
-	playerPrivatePtr =  playerArgument;
 }
 
 
@@ -13,6 +11,12 @@ Map::~Map()
 {
 }
 
+
+
+void Map::setPlayer(Player *playerArgument) {
+
+	playerPrivatePtr = playerArgument;
+}
 
 
 void Map::update(float time) {
